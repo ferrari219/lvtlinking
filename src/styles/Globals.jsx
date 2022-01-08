@@ -8,7 +8,7 @@ const Globals = () => {
         html {
           overflow-x: hidden;
           display: block;
-          font-size: 62.5%;
+          font-size: 62.5% !important;
           box-sizing: border-box;
           * {
             box-sizing: inherit;
