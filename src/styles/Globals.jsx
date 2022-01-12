@@ -1,10 +1,11 @@
 import React from 'react';
+/** @jsxImportSource @emotion/react */
 import { css, Global } from '@emotion/react';
 
 const Globals = () => {
 	return (
 		<Global
-			style={css`
+			styles={css`
 				html {
 					overflow-x: hidden;
 					display: block;
@@ -21,11 +22,6 @@ const Globals = () => {
 					padding: 0;
 				}
 				body {
-					/* height: 100vh; */
-					background: #abaeb7
-						url('https://ferrari219.github.io/lvtlinking/data/assets/img/bg.jpg')
-						no-repeat center center;
-					background-size: cover;
 					a {
 						text-decoration: none;
 						color: inherit;
