@@ -14,17 +14,23 @@ const PageTemplate = ({ header, children, footer, ...props }) => {
 
 const templateStyle = css`
 	width: 100%;
-	max-width: 89rem;
+	max-width: 120rem;
 	margin: 0 auto;
 	/* background-color: red; */
 	header {
-		background-color: red;
+		/* background-color: red; */
 	}
 	main {
-		background-color: blue;
+		/* background-color: blue; */
 	}
 	footer {
-		background-color: green;
+		/* background-color: green; */
+	}
+	@media screen and (max-width: 78rem) {
+		background-color: blue;
+	}
+	@media screen and (max-width: 36rem) {
+		background-color: red;
 	}
 `;
 

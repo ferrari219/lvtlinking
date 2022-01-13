@@ -1,6 +1,7 @@
 import React from 'react';
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import PropTypes from 'prop-types';
 
 const SearchForm = () => {
 	return (
@@ -9,6 +10,10 @@ const SearchForm = () => {
 			<button type="button">test</button>
 		</form>
 	);
+};
+
+SearchForm.propTypes = {
+	// name: PropTypes.string.isRequired,
 };
 
 const formStyle = css`

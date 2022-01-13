@@ -2,6 +2,7 @@ import React from 'react';
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import Logo from 'assets/img/logo.png';
+import { Link } from 'react-router-dom';
 import SearchForm from 'components/02_Molecules/SearchForm';
 
 const Header = () => {
@@ -11,6 +12,16 @@ const Header = () => {
 				<div className="left">
 					<div className="logo">
 						<img src={Logo} alt="LivartLinking" />
+					</div>
+					<div className="tab">
+						<ul>
+							<li>
+								<Link to="/">클래스</Link>
+							</li>
+							<li>
+								<Link to="/">플리마켓</Link>
+							</li>
+						</ul>
 					</div>
 					<div className="sch">
 						<SearchForm />
@@ -39,6 +50,21 @@ const headerStyle = css`
 				flex: 0 0 150px;
 				img {
 					width: 100%;
+				}
+			}
+			& > .tab {
+				ul {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					width: 200px;
+					li {
+						flex: 1;
+						border: 1px solid red;
+						a {
+							padding: 5px;
+						}
+					}
 				}
 			}
 			& > .sch {
