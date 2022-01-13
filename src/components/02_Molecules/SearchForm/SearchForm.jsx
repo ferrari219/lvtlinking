@@ -17,14 +17,17 @@ SearchForm.propTypes = {
 };
 
 const formStyle = css`
-	height: 3rem;
 	padding: 0 2rem;
 	input {
+		width: 42rem;
+		padding: 1rem;
 		background-color: #f8f8f8;
 		border-radius: 3rem;
 		border: 0;
 	}
 	button {
+		position: relative;
+		right: 5rem;
 	}
 `;
 

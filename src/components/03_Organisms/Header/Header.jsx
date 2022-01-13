@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import Logo from 'assets/img/logo.png';
 import { Link } from 'react-router-dom';
 import SearchForm from 'components/02_Molecules/SearchForm';
+import theme from 'styles/theme';
 
 const Header = () => {
 	return (
@@ -40,16 +41,20 @@ const headerStyle = css`
 		justify-content: space-between;
 		align-items: center;
 		height: 80px;
+		/* border: 1px solid blue; */
 		& > .left {
 			flex: 1;
 			display: flex;
 			flex-flow: row wrap;
-			justify-content: center;
+			align-items: center;
 			// background-color: red;
 			& > .logo {
 				flex: 0 0 150px;
+				/* border: 1px solid red; */
 				img {
+					display: block;
 					width: 100%;
+					padding-top: 0.3rem;
 				}
 			}
 			& > .tab {
@@ -57,12 +62,18 @@ const headerStyle = css`
 					display: flex;
 					flex-direction: row;
 					justify-content: center;
-					width: 200px;
+					width: 150px;
+					margin: 0 2rem;
 					li {
 						flex: 1;
-						border: 1px solid red;
+						/* border: 1px solid red; */
 						a {
-							padding: 5px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							width: 100%;
+							font-size: ${theme.size.lg};
+							font-weight: 400;
 						}
 					}
 				}
@@ -74,6 +85,7 @@ const headerStyle = css`
 		& > .right {
 			flex: 0 0 20rem;
 			text-align: right;
+			font-size: ${theme.size.base};
 			// background-color: blue;
 		}
 	}
