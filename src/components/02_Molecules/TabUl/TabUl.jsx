@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import theme from 'styles/theme';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const TabUl = () => {
+	const [now, setNow] = useState('/');
+	const onClick = useCallback((lnk) => {
+		// console.log('tabChange');
+		setNow(lnk);
+	}, []);
 	return (
 		<ul css={tabulStyle}>
 			{data &&
 				data.map(({ id, name, lnk }) => (
-					<li key={id}>
-						<Link to={lnk}>{name}</Link>
+					<li key={id} className={now === lnk ? 'is-active' : null}>
+						<button type="button" onClick={() => onClick(lnk)}>
+							{name}
+						</button>
+						{/* <Link to={lnk}>{name}</Link> */}
 					</li>
 				))}
 		</ul>
@@ -26,33 +34,37 @@ const data = [
 	{
 		id: 1,
 		name: '플리마켓',
-		lnk: '/',
+		lnk: '/flea',
 	},
 ];
 
-const tabulStyle = css`
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 100%;
-	& > li {
-		flex: 1;
-		/* border: 1px solid red; */
-		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-			font-size: ${theme.size.lg};
-			font-weight: 400;
-		}
-		&:hover,
-		&.is-active {
-			a {
-				color: ${theme.color.main};
+const tabulStyle = () => {
+	return css`
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		& > li {
+			flex: 1;
+			/* border: 1px solid red; */
+			button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				background: transparent;
+				border: none;
+				font-size: ${theme.size.md};
+				font-weight: 400;
+			}
+			&:hover,
+			&.is-active {
+				button {
+					color: ${theme.color.main};
+				}
 			}
 		}
-	}
-`;
+	`;
+};
 
 export default TabUl;
