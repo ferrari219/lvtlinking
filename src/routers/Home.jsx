@@ -12,8 +12,8 @@ const Home = () => {
 			<Title />
 			<PageTemplate header={<Header />} footer={<Footer />}>
 				<MainSwiper />
-				<PList />
-				<div>list4</div>
+				<PList divide="3" />
+				<PList divide="4" />
 			</PageTemplate>
 		</>
 	);
