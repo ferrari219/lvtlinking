@@ -1,10 +1,27 @@
 const theme = {
 	color: {
-		main: '#EA335D',
-		default: '#d9d9d9',
-		active: '#486FF2',
-		error: '#d95959', //에러났을때
-		success: '#1AB987', //성공했을때
+		main: '#ea335d',
+		def: '#363636',
+		light: {
+			bg: '#ebebeb',
+			bg2: '#f6f6f6',
+			btn: {
+				def: '#d9d9d9',
+				act: '#486FF2',
+				err: '#d95959', //에러났을때
+				suc: '#1AB987', //성공했을때
+			},
+		},
+		// dark: {
+		// 	bg: '#434753',
+		// 	bg2: '#2C323E',
+		// 	btn: {
+		// 		def: '#d9d9d9',
+		// 		act: '#486FF2',
+		// 		err: '#d95959', //에러났을때
+		// 		suc: '#1AB987', //성공했을때
+		// 	},
+		// },
 	},
 	size: {
 		sm: '1.4rem',
@@ -18,6 +35,7 @@ const theme = {
 		lv0: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;',
 		lv7: 'rgba(100, 100, 111, 1) 0px 7px 29px 0px;',
 	},
+	url: 'https://ferrari219.github.io/lvtliving/data/',
 };
 
 export default theme;

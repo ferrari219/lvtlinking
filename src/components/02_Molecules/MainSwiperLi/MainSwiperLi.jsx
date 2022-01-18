@@ -4,11 +4,16 @@ import { css } from '@emotion/react';
 import theme from 'styles/theme';
 import { Link } from 'react-router-dom';
 
-const MainSwiperLi = ({ id, title, sub, pic, bg, color, lnk }) => {
+const MainSwiperLi = ({ title, sub, pic, bg, color, lnk }) => {
 	return (
 		<div css={mainSwiperLiStyle(bg, color)}>
 			<Link to={lnk}>
-				<div className="picArea">pic</div>
+				<div className="picArea">
+					<img
+						src={`${theme.url}assets/img/${pic}.jpg`}
+						alt={title}
+					/>
+				</div>
 				<div className="txtArea">
 					<dl>
 						<dt>{title}</dt>
