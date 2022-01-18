@@ -10,10 +10,12 @@ const PUnit = ({ id, name, title, pic, price, lnk }) => {
 		<div css={punitStyle}>
 			<Link to={lnk}>
 				<div className="pic">
-					<img
-						src={`${theme.url}assets/img/${pic}.jpg`}
-						alt={title}
-					/>
+					{pic && (
+						<img
+							src={`${theme.url}assets/img/${pic}.jpg`}
+							alt={title}
+						/>
+					)}
 				</div>
 				<div className="txt">
 					<div className="name">{name}</div>
@@ -39,7 +41,21 @@ const punitStyle = css`
 	max-width: 50rem;
 	margin: 2rem 0;
 	/* padding: 0 1rem; */
+	& > a .pic {
+		position: relative;
+		overflow: hidden;
+		height: 24rem;
+		img {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 100%;
+			height: auto;
+			transform: translate(-50%, -50%);
+		}
+	}
 	& > a .txt {
+		padding: 1rem 0;
 		& > .name {
 			display: inline-flex;
 			padding: 0.1rem 0.5rem;

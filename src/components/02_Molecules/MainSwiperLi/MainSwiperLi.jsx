@@ -9,10 +9,12 @@ const MainSwiperLi = ({ title, sub, pic, bg, color, lnk }) => {
 		<div css={mainSwiperLiStyle(bg, color)}>
 			<Link to={lnk}>
 				<div className="picArea">
-					<img
-						src={`${theme.url}assets/img/${pic}.jpg`}
-						alt={title}
-					/>
+					{pic && (
+						<img
+							src={`${theme.url}assets/img/${pic}.jpg`}
+							alt={title}
+						/>
+					)}
 				</div>
 				<div className="txtArea">
 					<dl>
@@ -27,7 +29,7 @@ const MainSwiperLi = ({ title, sub, pic, bg, color, lnk }) => {
 
 const mainSwiperLiStyle = (bg, color) => {
 	return css`
-		height: 34rem;
+		height: inherit;
 		margin-bottom: 4rem;
 		color: ${color};
 		& > a {
@@ -37,17 +39,27 @@ const mainSwiperLiStyle = (bg, color) => {
 			height: calc(100% - 3rem);
 			background-color: ${bg};
 			.picArea {
-				flex: 0 0 50%;
+				flex: 0 0 55%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				overflow: hidden;
 				position: relative;
 				left: 2rem;
 				top: 3rem;
 				width: calc(100% - 2rem);
+				height: 34rem;
 				background-color: black;
-				opacity: 0.5;
+				/* opacity: 0.5; */
 				box-shadow: ${theme.shadow.lv7};
+				img {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					width: 100%;
+					height: auto;
+					transform: translate(-50%, -50%);
+				}
 			}
 			.txtArea {
 				flex: 1;

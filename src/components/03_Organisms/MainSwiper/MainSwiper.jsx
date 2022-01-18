@@ -67,6 +67,8 @@ const data = [
 	},
 ];
 
-const sectionStyle = css``;
+const sectionStyle = css`
+	height: 45rem;
+`;
 
 export default MainSwiper;
