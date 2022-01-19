@@ -56,8 +56,8 @@ const data = [
 	{
 		id: 2,
 		name: 'Name',
-		title: '[00] 클래스명',
-		pic: '',
+		title: '영어',
+		pic: 'sample_750_3',
 		price: '39500',
 		term: '5개월',
 		lnk: '/',
