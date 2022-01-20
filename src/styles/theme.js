@@ -35,7 +35,6 @@ const theme = {
 		lv0: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;',
 		lv7: 'rgba(100, 100, 111, 1) 0px 7px 29px 0px;',
 	},
-	url: 'https://ferrari219.github.io/lvtlinking/data/',
 };
 
 export default theme;

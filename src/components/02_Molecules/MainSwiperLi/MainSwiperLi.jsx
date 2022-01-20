@@ -3,6 +3,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 import theme from 'styles/theme';
 import { Link } from 'react-router-dom';
+import { baseURL } from 'api';
 
 const MainSwiperLi = ({ title, sub, pic, bg, color, lnk }) => {
 	return (
@@ -11,7 +12,7 @@ const MainSwiperLi = ({ title, sub, pic, bg, color, lnk }) => {
 				<div className="picArea">
 					{pic && (
 						<img
-							src={`${theme.url}assets/img/${pic}.jpg`}
+							src={`${baseURL}assets/img/${pic}.jpg`}
 							alt={title}
 						/>
 					)}

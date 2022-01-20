@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import theme from 'styles/theme';
+import { baseURL } from 'api';
 
 const PUnit = ({ id, name, title, pic, price, lnk }) => {
 	return (
@@ -12,7 +13,7 @@ const PUnit = ({ id, name, title, pic, price, lnk }) => {
 				<div className="pic">
 					{pic && (
 						<img
-							src={`${theme.url}assets/img/${pic}.jpg`}
+							src={`${baseURL}assets/img/${pic}.jpg`}
 							alt={title}
 						/>
 					)}
@@ -51,7 +52,11 @@ const punitStyle = css`
 			top: 50%;
 			width: 100%;
 			height: auto;
-			transform: translate(-50%, -50%);
+			transform: scale(1) translate(-50%, -50%);
+			transition: transform 0.5s ease-in-out;
+			&:hover {
+				transform: scale(1.2) translate(-40%, -40%);
+			}
 		}
 	}
 	& > a .txt {
