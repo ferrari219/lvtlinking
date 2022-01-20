@@ -4,9 +4,9 @@ import { css } from '@emotion/react';
 import Logo from 'assets/img/logo.png';
 import theme from 'styles/theme';
 
-const Footer = () => {
+const Footer = ({ wide = false }) => {
 	return (
-		<div css={footerStyle}>
+		<div css={footerStyle(wide)}>
 			<div className="left">
 				<img src={Logo} alt="LivartLinking" />
 			</div>
@@ -17,26 +17,29 @@ const Footer = () => {
 	);
 };
 
-const footerStyle = css`
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-top: 2rem;
-	padding: 2rem;
-	border-top: 1px solid #ddd;
-	& > .left {
-		flex: 0 0 30rem;
-		img {
-			width: 15rem;
-			filter: grayscale(100%);
-			opacity: 0.8;
+const footerStyle = (wide) => {
+	return css`
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: ${wide ? '100%' : '120rem'};
+		margin: 2rem auto 0 auto;
+		padding: 2rem 0;
+		border-top: 1px solid #ddd;
+		& > .left {
+			flex: 0 0 30rem;
+			img {
+				width: 15rem;
+				filter: grayscale(100%);
+				opacity: 0.8;
+			}
 		}
-	}
-	& > .right {
-		flex: 1;
-		font-size: ${theme.size.sm};
-		color: #666;
-	}
-`;
+		& > .right {
+			flex: 1;
+			font-size: ${theme.size.sm};
+			color: #666;
+		}
+	`;
+};
 
 export default Footer;

@@ -91,6 +91,9 @@ const data = [
 	},
 ];
 
-const plistStyle = css``;
+const plistStyle = css`
+	width: 120rem;
+	margin: 0 auto;
+`;
 
 export default PList;

@@ -69,6 +69,9 @@ const data = [
 
 const sectionStyle = css`
 	height: 45rem;
+	.swiper {
+		overflow: visible;
+	}
 `;
 
 export default MainSwiper;
