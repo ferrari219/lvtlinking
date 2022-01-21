@@ -65,7 +65,11 @@ const mainSwiperLiStyle = (bg, color) => {
 						top: 50%;
 						width: 100%;
 						height: auto;
-						transform: translate(-50%, -50%);
+						transform: scale(1) translate(-50%, -50%);
+						transition: transform 0.5s ease-in-out;
+						&:hover {
+							transform: scale(1.2) translate(-40%, -40%);
+						}
 					}
 				}
 				.txtArea {
