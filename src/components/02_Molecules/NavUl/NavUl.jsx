@@ -72,6 +72,19 @@ const navulStyle = css`
       }
     }
   }
+  @media screen and (max-width: 78rem) {
+  }
+  @media screen and (max-width: 36rem) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    // align-items: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    & > li {
+      flex: 0 0 11rem;
+    }
+  }
 `;
 
 export default NavUl;

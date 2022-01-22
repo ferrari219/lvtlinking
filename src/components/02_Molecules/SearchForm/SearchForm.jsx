@@ -20,23 +20,38 @@ SearchForm.propTypes = {
 };
 
 const formStyle = css`
+  position: relative;
   padding: 0 1rem;
   & > input {
-    width: calc(100% - 4rem);
+    width: 100%;
     padding: 1rem 2rem;
     background-color: #f8f8f8;
     border-radius: 3rem;
     border: 0;
   }
   & > button {
-    position: relative;
-    right: 4rem;
-    top: 0.5rem;
+    position: absolute;
+    right: 2rem;
+    top: 0.8rem;
     background: transparent;
     border: none;
     svg {
       font-size: 2rem;
     }
+  }
+  @media only screen and (max-width: 78rem) {
+    text-align: right;
+    & > input {
+      display: none;
+    }
+    & > button {
+      position: initial;
+      svg {
+        font-size: 2.6rem;
+      }
+    }
+  }
+  @media only screen and (max-width: 36rem) {
   }
 `;
 
