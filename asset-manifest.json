@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/lvtlinking/static/css/main.a7d95ca0.css",
-    "main.js": "/lvtlinking/static/js/main.80e3d03a.js",
+    "main.js": "/lvtlinking/static/js/main.be76baff.js",
     "index.html": "/lvtlinking/index.html",
     "main.a7d95ca0.css.map": "/lvtlinking/static/css/main.a7d95ca0.css.map",
-    "main.80e3d03a.js.map": "/lvtlinking/static/js/main.80e3d03a.js.map"
+    "main.be76baff.js.map": "/lvtlinking/static/js/main.be76baff.js.map"
   },
   "entrypoints": [
     "static/css/main.a7d95ca0.css",
-    "static/js/main.80e3d03a.js"
+    "static/js/main.be76baff.js"
   ]
 }
