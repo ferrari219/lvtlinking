@@ -19,23 +19,24 @@
 
 ## Dev Install Module
 
-- [x] React.js
-- [x] CRA
-- [x] javascript
-- [x] bootstrap
-- [x] react-router-dom@6
-- [x] axios
-- [x] storybook
-- [x] emotion
+-   [x] React.js
+-   [x] CRA
+-   [x] javascript
+-   [x] bootstrap
+-   [x] react-router-dom@6
+-   [x] axios
+-   [x] react-responsive
+-   [x] storybook
+-   [x] emotion
 
 ## Design Tool
 
-- [x] Adobe XD
+-   [x] Adobe XD
 
 ## Pages
 
-- [x] Main: 메인화면
-- [x] Detail: 클래스 상세화면
+-   [x] Main: 메인화면
+-   [x] Detail: 클래스 상세화면
 
 ## Components
 
@@ -43,11 +44,11 @@
 
 Atomic Design 방식
 
-- [x] 01_Atom: 단일기능(버튼, 인풋, 아이콘, li 등)
-- [x] 02_Molecules: 2가지 이상 복합 컴포넌트 / Wrap(ul)
-- [x] 03_Organism: Atom+Molecules
-- [x] 04_Templates: 기능 제어 가능한 모듈 단위
-- [x] 99_Etc: Heads, Layout
+-   [x] 01_Atom: 단일기능(버튼, 인풋, 아이콘, li 등)
+-   [x] 02_Molecules: 2가지 이상 복합 컴포넌트 / Wrap(ul)
+-   [x] 03_Organism: Atom+Molecules
+-   [x] 04_Templates: 기능 제어 가능한 모듈 단위
+-   [x] 99_Etc: Heads, Layout
 
 ## 개발 이야기
 
