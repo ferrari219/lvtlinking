@@ -33,8 +33,8 @@ const theme = {
 	},
 	shadow: {
 		// https://getcssscan.com/css-box-shadow-examples
-		lv0: 'rgba(149, 157, 165, 0.2) 0px 8px 24px;',
-		lv7: 'rgba(100, 100, 111, 1) 0px 7px 29px 0px;',
+		lv0: 'rgba(0, 0, 0, 0.2) 0px 8px 24px;',
+		lv7: 'rgba(0, 0, 0, 0.7) 0px 7px 29px 0px;',
 	},
 };
 

@@ -65,7 +65,7 @@ const punitStyle = css`
 		& > .name {
 			display: inline-flex;
 			padding: 0 1rem;
-			border: 1px solid #999;
+			background-color: #eee;
 			border-radius: 2rem;
 			font-size: ${theme.size.sm};
 			font-weight: 400;

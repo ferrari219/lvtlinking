@@ -139,13 +139,13 @@ const moMainSwiperLiStyle = (bg, color) => {
 			background-color: ${bg};
 			& > .wrap {
 				width: 100%;
-				max-width: 89rem;
 				margin: 0 auto;
 				padding: 0;
 				.picArea {
 					overflow: hidden;
 					width: 100%;
 					height: auto;
+					max-height: 56rem;
 					margin: 0 auto;
 					box-shadow: ${theme.shadow.lv7};
 					img {
@@ -160,6 +160,7 @@ const moMainSwiperLiStyle = (bg, color) => {
 					width: inherit;
 					max-width: 89rem;
 					height: 11rem;
+					margin: 0 auto;
 					dl {
 						width: inherit;
 						padding: 2rem 3rem 3rem 3rem;
