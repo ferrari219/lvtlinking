@@ -132,56 +132,41 @@ const pcMainSwiperLiStyle = (bg, color) => {
 const moMainSwiperLiStyle = (bg, color) => {
 	return css`
 		height: inherit;
-		margin-bottom: 4rem;
 		color: ${color};
 		& > a {
 			display: block;
 			width: inherit;
-			height: calc(100% - 3rem);
 			background-color: ${bg};
 			& > .wrap {
-				display: flex;
-				flex-flow: row wrap;
-				width: 120rem;
+				width: 100%;
+				max-width: 89rem;
 				margin: 0 auto;
+				padding: 0;
 				.picArea {
-					flex: 0 0 55%;
-					display: flex;
-					justify-content: center;
-					align-items: center;
 					overflow: hidden;
-					position: relative;
-					left: 2rem;
-					top: 3rem;
-					width: calc(100% - 2rem);
-					height: 34rem;
-					background-color: black;
-					/* opacity: 0.5; */
+					width: 100%;
+					height: auto;
+					margin: 0 auto;
 					box-shadow: ${theme.shadow.lv7};
 					img {
-						position: absolute;
-						left: 50%;
-						top: 50%;
+						display: block;
 						width: 100%;
-						height: auto;
-						transform: scale(1) translate(-50%, -50%);
-						transition: transform 0.5s ease-in-out;
-						&:hover {
-							transform: scale(1.2) translate(-40%, -40%);
-						}
 					}
 				}
 				.txtArea {
-					flex: 1;
 					display: flex;
 					align-items: center;
+					text-align: center;
+					width: inherit;
+					max-width: 89rem;
+					height: 11rem;
 					dl {
-						max-width: 32rem;
-						padding: 5rem;
+						width: inherit;
+						padding: 2rem 3rem 3rem 3rem;
 					}
 					dt {
 						padding: 1rem 0;
-						font-size: 3.4rem;
+						font-size: ${theme.size.xlg};
 						font-weight: 700;
 						line-height: 1.2;
 						white-space: pre-line;
@@ -191,7 +176,8 @@ const moMainSwiperLiStyle = (bg, color) => {
 					dd {
 						margin: 0;
 						padding: 0;
-						font-size: ${theme.size.base};
+						font-size: ${theme.size.sm};
+						line-height: 1.5;
 						white-space: pre-line;
 						word-break: keep-all;
 						letter-spacing: -0.05em;

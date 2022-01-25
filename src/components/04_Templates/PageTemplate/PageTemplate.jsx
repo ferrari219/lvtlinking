@@ -27,13 +27,6 @@ const templateStyle = (wide) => {
 		footer {
 			/* background-color: green; */
 		}
-		@media screen and (max-width: 78rem) {
-			max-width: 100%;
-			// background-color: blue;
-		}
-		@media screen and (max-width: 36rem) {
-			// background-color: red;
-		}
 	`;
 };
 

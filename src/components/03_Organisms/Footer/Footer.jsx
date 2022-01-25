@@ -3,21 +3,38 @@ import React from 'react';
 import { css } from '@emotion/react';
 import Logo from 'assets/img/logo.png';
 import theme from 'styles/theme';
+import { PC, Mobile } from 'components/04_Templates/MediaQuery/MediaQuery';
+import { SrOnly } from 'styles/Globals';
 
 const Footer = ({ wide = false }) => {
 	return (
-		<div css={footerStyle(wide)}>
-			<div className="left">
-				<img src={Logo} alt="LivartLinking" />
-			</div>
-			<div className="right">
-				Copyright ⓒ2022 LivartLinking inc, ltd. All rights reserved
-			</div>
-		</div>
+		<>
+			<PC>
+				<div css={pcFooterStyle(wide)}>
+					<h2>풋터</h2>
+					<div className="left">
+						<img src={Logo} alt="LivartLinking" />
+					</div>
+					<div className="right">
+						Copyright ⓒ2022 LivartLinking inc, ltd. All rights
+						reserved
+					</div>
+				</div>
+			</PC>
+			<Mobile>
+				<div css={moFooterStyle}>
+					<h2>풋터</h2>
+					<div className="right">
+						Copyright ⓒ2022 LivartLinking inc, ltd. All rights
+						reserved
+					</div>
+				</div>
+			</Mobile>
+		</>
 	);
 };
 
-const footerStyle = (wide) => {
+const pcFooterStyle = (wide) => {
 	return css`
 		display: flex;
 		flex-direction: row;
@@ -26,6 +43,9 @@ const footerStyle = (wide) => {
 		margin: 2rem auto 0 auto;
 		padding: 2rem 0;
 		border-top: 1px solid #ddd;
+		& > h2 {
+			${SrOnly};
+		}
 		& > .left {
 			flex: 0 0 30rem;
 			img {
@@ -41,5 +61,25 @@ const footerStyle = (wide) => {
 		}
 	`;
 };
+const moFooterStyle = css`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	margin: 2rem auto 0 auto;
+	padding: 2rem 0;
+	border-top: 1px solid #ddd;
+	& > h2 {
+		${SrOnly};
+	}
+	& > .right {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		font-size: ${theme.size.xsm};
+		letter-spacing: 0;
+		color: #666;
+	}
+`;
 
 export default Footer;

@@ -40,12 +40,13 @@ PUnit.protoTypes = {
 const punitStyle = css`
 	width: 100%;
 	max-width: 50rem;
-	margin: 2rem 0;
+	margin: 1rem 0;
 	/* padding: 0 1rem; */
 	& > a .pic {
 		position: relative;
 		overflow: hidden;
-		height: 24rem;
+		height: 0;
+		padding-top: 80%;
 		img {
 			position: absolute;
 			left: 50%;
@@ -63,9 +64,9 @@ const punitStyle = css`
 		padding: 1rem 0;
 		& > .name {
 			display: inline-flex;
-			padding: 0.1rem 0.5rem;
-			border: 1px solid ${theme.color.def};
-			border-radius: 0.5rem;
+			padding: 0 1rem;
+			border: 1px solid #999;
+			border-radius: 2rem;
 			font-size: ${theme.size.sm};
 			font-weight: 400;
 			color: ${theme.color.def};
@@ -74,13 +75,13 @@ const punitStyle = css`
 			margin: 1rem 0;
 			font-size: ${theme.size.sm};
 			font-weight: 600;
-			color: ${theme.color.def};
+			color: #444;
 			line-height: 1.4;
 		}
 		& > .price {
 			font-size: ${theme.size.lg};
 			font-weight: 600;
-			color: ${theme.color.def};
+			color: ${theme.color.main};
 		}
 	}
 `;

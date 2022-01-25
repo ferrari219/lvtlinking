@@ -5,28 +5,54 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import PropTypes from 'prop-types';
 import Unit from 'components/02_Molecules/PUnit/PUnit';
+import { PC, Mobile } from 'components/04_Templates/MediaQuery/MediaQuery';
 
 const PList = ({ divide = '4' }) => {
-	const swiperOption = {
+	const pcSwiperOption = {
 		spaceBetween: 20,
 		slidesPerView: divide,
 		// onSlideChange: () => console.log('slide change'),
 		// onSwiper: (swiper) => console.log(swiper),
 	};
+	const moSwiperOption = {
+		spaceBetween: 20,
+		slidesPerView: 2,
+	};
 	return (
-		<section
-			css={plistStyle}
-			// className={[divide ? `list${divide}` : null].join(' ')}
-		>
-			<Swiper {...swiperOption}>
-				{data &&
-					data.map((item) => (
-						<SwiperSlide key={item.id}>
-							<Unit {...item} />
-						</SwiperSlide>
-					))}
-			</Swiper>
-		</section>
+		<>
+			<PC>
+				<section
+					css={pcPlistStyle}
+					// className={[divide ? `list${divide}` : null].join(' ')}
+				>
+					<h2>리스트</h2>
+					<Swiper {...pcSwiperOption}>
+						{data &&
+							data.map((item) => (
+								<SwiperSlide key={item.id}>
+									<Unit {...item} />
+								</SwiperSlide>
+							))}
+					</Swiper>
+				</section>
+			</PC>
+			<Mobile>
+				<section
+					css={moPlistStyle}
+					// className={[divide ? `list${divide}` : null].join(' ')}
+				>
+					<h2>리스트</h2>
+					<Swiper {...moSwiperOption}>
+						{data &&
+							data.map((item) => (
+								<SwiperSlide key={item.id}>
+									<Unit {...item} />
+								</SwiperSlide>
+							))}
+					</Swiper>
+				</section>
+			</Mobile>
+		</>
 	);
 };
 
@@ -91,9 +117,14 @@ const data = [
 	},
 ];
 
-const plistStyle = css`
+const pcPlistStyle = css`
 	width: 120rem;
 	margin: 0 auto;
+`;
+const moPlistStyle = css`
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 1rem;
 `;
 
 export default PList;

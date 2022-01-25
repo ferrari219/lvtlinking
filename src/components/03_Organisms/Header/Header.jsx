@@ -9,17 +9,19 @@ import NavUl from 'components/02_Molecules/NavUl';
 import NavpUl from 'components/02_Molecules/NavpUl';
 import Gnb from 'components/02_Molecules/Gnb/Gnb';
 import { PC, Mobile } from 'components/04_Templates/MediaQuery/MediaQuery';
+import { SrOnly } from 'styles/Globals';
 
 const Header = ({ wide = false }) => {
 	return (
 		<>
 			<PC>
 				<section css={pcheaderStyle(wide)}>
+					<h2>헤더</h2>
 					<div className="top">
 						<div className="left">
-							<div className="logo">
+							<h1 className="logo">
 								<img src={Logo} alt="LivartLinking" />
-							</div>
+							</h1>
 							<div className="tab">
 								<TabUl />
 							</div>
@@ -43,6 +45,7 @@ const Header = ({ wide = false }) => {
 			</PC>
 			<Mobile>
 				<section css={moheaderStyle}>
+					<h2>헤더</h2>
 					<div className="top">
 						<div className="left">
 							<div className="logo">
@@ -68,6 +71,9 @@ const pcheaderStyle = (wide) => {
 	return css`
 		width: ${wide ? '100%' : '120rem'};
 		margin: 2rem auto 0 auto;
+		& > h2 {
+			${SrOnly};
+		}
 		& > .top {
 			display: flex;
 			justify-content: space-between;
@@ -123,6 +129,9 @@ const moheaderStyle = css`
 	width: 100%;
 	max-width: iniitial;
 	margin: 2rem auto 0 auto;
+	& > h2 {
+		${SrOnly};
+	}
 	& > .top {
 		height: 4rem;
 		padding: 0 2rem;

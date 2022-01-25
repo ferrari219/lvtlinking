@@ -5,28 +5,48 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Controller } from 'swiper';
 import 'swiper/css';
 import MainSwiperLi from '../../02_Molecules/MainSwiperLi/index';
+import { PC, Mobile } from 'components/04_Templates/MediaQuery/MediaQuery';
+import { SrOnly } from 'styles/Globals';
 
 const MainSwiper = () => {
 	const [controlledSwiper, setControlledSwiper] = useState(null);
 	return (
-		<section css={sectionStyle}>
-			<Swiper
-				{...swiperOption}
-				modules={[Controller]}
-				controller={{ control: controlledSwiper }}
-			>
-				{data &&
-					data.map((item) => (
-						<SwiperSlide key={item.id}>
-							<MainSwiperLi {...item} />
-						</SwiperSlide>
-					))}
-			</Swiper>
-
-			<Swiper modules={[Controller]} onSwiper={setControlledSwiper}>
-				test
-			</Swiper>
-		</section>
+		<>
+			<PC>
+				<section css={pcSectionStyle}>
+					<h2>메인배너</h2>
+					<Swiper
+						{...swiperOption}
+						modules={[Controller]}
+						controller={{ control: controlledSwiper }}
+					>
+						{data &&
+							data.map((item) => (
+								<SwiperSlide key={item.id}>
+									<MainSwiperLi {...item} />
+								</SwiperSlide>
+							))}
+					</Swiper>
+				</section>
+			</PC>
+			<Mobile>
+				<section css={moSectionStyle}>
+					<h2>메인배너</h2>
+					<Swiper
+						{...swiperOption}
+						modules={[Controller]}
+						controller={{ control: controlledSwiper }}
+					>
+						{data &&
+							data.map((item) => (
+								<SwiperSlide key={item.id}>
+									<MainSwiperLi {...item} />
+								</SwiperSlide>
+							))}
+					</Swiper>
+				</section>
+			</Mobile>
+		</>
 	);
 };
 
@@ -67,10 +87,22 @@ const data = [
 	},
 ];
 
-const sectionStyle = css`
+const pcSectionStyle = css`
 	height: 45rem;
+	& > h2 {
+		${SrOnly};
+	}
 	.swiper {
 		overflow: visible;
+	}
+`;
+const moSectionStyle = css`
+	margin-bottom: 2rem;
+	& > h2 {
+		${SrOnly};
+	}
+	.swiper {
+		/* overflow: visible; */
 	}
 `;
 
