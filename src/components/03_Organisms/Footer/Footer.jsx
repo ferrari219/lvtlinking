@@ -57,7 +57,7 @@ const pcFooterStyle = (wide) => {
 		& > .right {
 			flex: 1;
 			font-size: ${theme.size.sm};
-			color: #666;
+			color: #999;
 		}
 	`;
 };
@@ -78,7 +78,7 @@ const moFooterStyle = css`
 		justify-content: center;
 		font-size: ${theme.size.xsm};
 		letter-spacing: 0;
-		color: #666;
+		color: #999;
 	}
 `;
 

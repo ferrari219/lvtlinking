@@ -12,6 +12,8 @@ const Globals = () => {
 					display: block;
 					font-size: 62.5% !important;
 					box-sizing: border-box;
+
+					/* 스크롤바 */
 					&::-webkit-scrollbar {
 						width: 10px;
 					}
@@ -35,6 +37,7 @@ const Globals = () => {
 					padding: 0;
 				}
 				body {
+					min-width: 36rem;
 					margin: 0;
 					padding: 0;
 					a {
