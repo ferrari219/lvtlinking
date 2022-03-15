@@ -1,11 +1,11 @@
-import TabpUl from './TabpUl';
+import MainSwiperLi from './MainSwiperLi';
 
 export default {
-  title: '02_Molecules/TabpUl',
-  component: TabpUl,
+	title: '02_Molecules/MainSwiperLi',
+	component: MainSwiperLi,
 };
 
-const Template = (args) => <TabpUl {...args} />;
+const Template = (args) => <MainSwiperLi {...args} />;
 
 export const Overview = Template.bind({});
 Overview.args = {};

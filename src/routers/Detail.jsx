@@ -1,19 +1,54 @@
 import React from 'react';
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 import Title from 'components/99_Etc/Title';
 import PageTemplate from 'components/04_Templates/PageTemplate/PageTemplate';
-import Header from 'components/03_Organisms/Header/Header';
+import { PC, Mobile } from 'components/04_Templates/MediaQuery/MediaQuery';
+import Header from 'components/03_Organisms/Header';
+import Footer from 'components/03_Organisms/Footer';
+import ClassInfoWrap from 'components/03_Organisms/ClassInfoWrap';
+import PriceInfoWrap from 'components/03_Organisms/PriceInfoWrap';
+import PropTypes from 'prop-types';
 
-const Detail = () => {
+const Detail = ({ wide = false }) => {
 	return (
 		<>
-			<Title ttl="Detail" />
-			<PageTemplate header={<Header />}>
-				<div>상단이미지</div>
-				<div>탭+클래스 소개</div>
-				<div>결제영역</div>
-			</PageTemplate>
+			<Title />
+			<PC>
+				<PageTemplate header={<Header />} footer={<Footer />}>
+					<div css={pcDetailStyle(wide)}>
+						<div className="left">
+							<ClassInfoWrap />
+						</div>
+						<div className="right">
+							<PriceInfoWrap />
+						</div>
+					</div>
+				</PageTemplate>
+			</PC>
+			<Mobile>제작중</Mobile>
 		</>
 	);
+};
+
+Detail.propTypes = {
+	wide: PropTypes.bool,
+};
+
+const pcDetailStyle = (wide) => {
+	return css`
+		display: flex;
+		flexflow: row wrap;
+		width: ${wide ? '100%' : '120rem'};
+		margin: 2rem auto 0 auto;
+		& > .left {
+			flex: 6;
+			padding: 0 5rem 10rem 0;
+		}
+		& > .right {
+			flex: 2;
+		}
+	`;
 };
 
 export default Detail;
